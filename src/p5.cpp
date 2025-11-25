@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void hanoi(int n, char from, char to, char aux) {
+void hanoi(int n, int from, int to, int aux) {
     if (n == 1) {
         cout << "Move disk 1 from " << from << " to " << aux << endl;
         cout << "Move disk 1 from " << aux << " to " << to << endl;
@@ -19,6 +19,6 @@ void hanoi(int n, char from, char to, char aux) {
 int main() {
     int n;
     cin >> n;
-    hanoi(n, '1', '3', '2');
+    hanoi(n, 1, 3, 2);
     return 0;
 }
