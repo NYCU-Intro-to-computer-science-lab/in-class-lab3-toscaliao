@@ -20,10 +20,10 @@ void hanoi(int n, int from, int to, int aux) {
     }
     hanoi(n-1,from,to,aux);
     cout<<"Move disk "<< n <<" from " << from << " to " << aux << endl;
+    hanoi(n-1,aux,to,from);
     hanoi(n-1,to,from,aux);
-    hanoi(n-1,from,to,aux);
-    cout<<"Move disk "<< n <<" from " << from << " to " << aux << endl;
-    hanoi(n-1,to,aux,from);
+    cout<<"Move disk "<< n <<" from " << aux << " to " << to << endl;
+    hanoi(n-1,to,from,aux);
 }
 
 int main() {
